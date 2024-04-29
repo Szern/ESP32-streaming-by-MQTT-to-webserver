@@ -1,7 +1,7 @@
 # ESP32-streaming-by-MQTT-to-webserver
 Video streaming from ESP32-CAM to own webserver (for exaample VPS) using MQTT protocol with SSL. Complete solution.
 
-Things you need:
+## Things you need:
 1. ESP32-CAM module & ESP32-CAM-MB USB Programmer (for example https://sklep.msalamon.pl/produkt/plytka-esp32-z-kamera-esp32-cam-wifi-ble-4-2-dedykowany-programator/ or https://www.amazon.de/s?k=Aideepen+ESP32-CAM+W-BT+Board+ESP32-CAM-MB+Micro+USB+to+Serial+Port+CH-340G+with+OV2640+2MP+Camera+Module+Dual+Mode+Support+NodeMCU)
 2. A computer with an Arduino IDE installed
 3. USB (computer) <-> MicroUSB (programer) cable
@@ -19,7 +19,7 @@ Now you can start connection between ESP32-CAM and webserver.
 
 In ArduinoIDE install MQTTPubSubClient library - https://github.com/cyijun/ESP32MQTTClient](https://github.com/hideakitai/MQTTPubSubClient
 
-You can use file streamESP32CAM.ino but you have to change this lines:
+You can use file /esp32cam/streamESP32CAM.ino but you have to change this lines:
 
 // configuration start
 
