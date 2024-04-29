@@ -13,8 +13,8 @@ Video streaming from ESP32-CAM to own webserver (for exaample VPS) using MQTT pr
 ### Server side
 
 First you have to prepare MQTT brooker. I'am using Mosquitto MQTT Messaging Broker. Two good manuals:
-.* [How to Install and Secure the Mosquitto MQTT Messaging Broker on Debian 10](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-debian-10)
-.* [How to Install Mosquitto MQTT Message Broker on Debian 11](https://www.howtoforge.com/how-to-install-mosquitto-mqtt-message-broker-on-debian-11/)
+* [How to Install and Secure the Mosquitto MQTT Messaging Broker on Debian 10](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-debian-10)
+* [How to Install Mosquitto MQTT Message Broker on Debian 11](https://www.howtoforge.com/how-to-install-mosquitto-mqtt-message-broker-on-debian-11/)
 In my case it is Debian 11.9 version.
 
 Next you need to install MQTT client for PHP (exactly FastCGI wrapper). I'm using [Mosquitto-PHP](https://github.com/mgdm/Mosquitto-PHP)
@@ -23,7 +23,7 @@ Now you can start connection between ESP32-CAM and webserver.
 
 ### ESP32 side
 
-In ArduinoIDE install MQTTPubSubClient library - https://github.com/cyijun/ESP32MQTTClient](https://github.com/hideakitai/MQTTPubSubClient
+In ArduinoIDE install [MQTTPubSubClient library](https://github.com/hideakitai/MQTTPubSubClient)
 
 You can use file [/esp32cam/streamESP32CAM.ino](https://github.com/Szern/ESP32-streaming-by-MQTT-to-webserver/blob/main/esp32cam/streamESP32CAM.ino) but you have to change this lines:
 
