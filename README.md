@@ -27,7 +27,7 @@ In ArduinoIDE install MQTTPubSubClient library - https://github.com/cyijun/ESP32
 
 You can use file [/esp32cam/streamESP32CAM.ino](https://github.com/Szern/ESP32-streaming-by-MQTT-to-webserver/blob/main/esp32cam/streamESP32CAM.ino) but you have to change this lines:
 
-'''c
+```c
 // configuration start
 
 const char* ssid = "your_WiFi_network_name"; // Replace with your network name
@@ -53,7 +53,7 @@ const char CERT_CA[] =
   "-----END CERTIFICATE-----\n";
 
 // configuration end
-'''
+```
 
 After make this changes you upload file (using ArduinoIDE) to ESP32-CAM.
 
@@ -62,20 +62,20 @@ After make this changes you upload file (using ArduinoIDE) to ESP32-CAM.
 On server we will build web interface. In nginx you have to configure domain (or subdomain) with SSL certyficate (for example free Certbot).
 One file you need is [/webserver/webcam.php](https://github.com/Szern/ESP32-streaming-by-MQTT-to-webserver/blob/main/webserver/webcam.php).
 You have to change three line:
-'''php
+```php
 $username = "mosquitto"; // Replace with your MQTT brooker user name
 $password = "mosquitto"; // Replace with your MQTT brooker users password
 ...
 $topic = "cam/out"; // Replace with your webserver topic name to send images from camera to server
-'''
+```
 and second file: [/webserver/stream.php](https://github.com/Szern/ESP32-streaming-by-MQTT-to-webserver/blob/main/webserver/stream.php)
 where you have to change follow lines:
-'''php
+```php
 $username = "mosquitto"; // Replace with your MQTT brooker user name
 $password = "mosquitto"; // Replace with your MQTT brooker users password
 ...
 $topic = "cam/in"; // Replace with your webserver topic name to send instructions from server to camera
-'''
+```
 
 ---
 
