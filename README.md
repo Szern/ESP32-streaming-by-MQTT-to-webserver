@@ -16,3 +16,34 @@ In my case it is Debian 11.9 version.
 Next you need to install MQTT client for PHP (exactly FastCGI wrapper). I'm using Mosquitto-PHP - https://github.com/mgdm/Mosquitto-PHP
 
 Now you can start connection between ESP32-CAM and webserver.
+
+In ArduinoIDE install MQTTPubSubClient library - https://github.com/cyijun/ESP32MQTTClient](https://github.com/hideakitai/MQTTPubSubClient
+
+You can use file streamESP32CAM.ino but you have to change this lines:
+
+// configuration start
+
+const char* ssid = "your_WiFi_network_name"; // Replace with your network name
+const char* password = "password_to_your_WiFi_network_name"; // Replace with your password to WiFi
+
+const char* ntpServer = "ntp1.tp.pl";
+const long  gmtOffset_sec = 3600;   // Replace with your GMT offset (seconds)
+const int   daylightOffset_sec = 3600;  // Replace with your daylight offset (seconds)
+
+const char* mqttServer = "www.server.eu"; // Replace with your webserver adress or webserver IP
+const long mqttPort = 8883;
+const char* mqttUser = "mosquitto"; // Replace with your MQTT brooker user name
+const char* mqttPass = "mosquitto"; // Replace with your MQTT brooker users password
+const char* mqttId = "esp32-cam";
+const char* mqttTopicOut = "cam/out"; // Replace with your webserver topic name to send images from camera to server
+const char* mqttTopicIn = "cam/in"; // Replace with your webserver topic name to send instructions from server to camera
+
+const char CERT_CA[] =
+  "-----BEGIN CERTIFICATE-----\n" \
+// insert your sever CA certificate
+// each line like to:
+// "gt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6W\n" \
+  "-----END CERTIFICATE-----\n";
+
+// configuration end
+
