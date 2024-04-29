@@ -79,4 +79,4 @@ $topic = "cam/in"; // Replace with your webserver topic name to send instruction
 
 ---
 
-That's all folks. You can connect power supply to ESP32-CAM and go to the browser (changing your domain or subdomain address): https&#58;&#47;&#47;www&period;yourdomain&period;com&#47;stream&period;php
+That's all folks. You can connect power supply to ESP32-CAM and go to the browser (changing your domain or subdomain address): `https://www.yourdomain.com/stream.php`
