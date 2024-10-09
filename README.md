@@ -13,7 +13,7 @@ Own webserver (for example VPS) is very convinient option. I'm using LEMP stack 
 
 ---
 
-### Brooker MQTT
+### Broker MQTT
 
 Firstly could you have to have **MQTT** broker.
 
