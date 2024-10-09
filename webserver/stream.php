@@ -277,9 +277,6 @@ if ($set[7] == 0) {
     <td></td>
     <td><input type="submit" value="Send" style="width:90px;"></td>
     </tr>
-    <tr>
-    <td><a href="https://asm.metricsmaster.eu/">return</a></td>
-    </tr>
     </table>
 </form>
 
