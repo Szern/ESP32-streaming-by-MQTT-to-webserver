@@ -159,4 +159,6 @@ You can have one file stream.php and a lot files: webcam1.php, webcam2.php, webc
 
 Now you can start connection between ESP32-CAM, MQTT brooker and webserver.
 
+![web panel](./img/stream.png)
+
 That's all folks. You can connect power supply to ESP32-CAM and go to the browser (changing your domain or subdomain address): `https://www.yourdomain.com/stream.php`
