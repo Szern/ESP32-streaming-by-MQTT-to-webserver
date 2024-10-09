@@ -10,7 +10,7 @@ $port = 1883;
 $keepalive = 60;
 $interface = null;
 
-$topic = "cam/out"; // Replace with your webserver topic name to send images from camera to server
+$topic = "cam1/out"; // Replace with your webserver topic name to send images from camera to server
 $qos = 0;
 
 $client = new Mosquitto\Client("PHP1");
@@ -28,6 +28,7 @@ $client->onMessage(function($message) use ($client) {
 $client->connect($host, $port, $keepalive, $interface);
 $client->subscribe($topic, $qos);
 
-$client->loopForever();
+$client->loopForever(0);
+$client->disconnect();
 
 ?>
